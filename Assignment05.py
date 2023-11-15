@@ -125,9 +125,10 @@ while True:
             file.close()
             print('*' * 50)
             print("The following data has been saved: \n")
-            print(f'{student_data["FirstName"]}, '
-                  f'{student_data["LastName"]}, '
-                  f'{student_data["CourseName"]}')
+            for student in student_list:
+                print(f'{student["FirstName"]}, '
+                      f'{student["LastName"]}, '
+                      f'{student["CourseName"]}!')
             print('*' * 50)
         # Raising an exception to validate the JSON format
         except TypeError as e:
